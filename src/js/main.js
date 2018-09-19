@@ -34,7 +34,7 @@ $(document).ready(function(){
     // initLazyLoad();
 
     // development helper
-    _window.on('resize', debounce(setBreakpoint, 200))
+    _window.on('resize', debounce(setBreakpoint, 200));
 
     // AVAILABLE in _components folder
     // copy paste in main.js and initialize here
@@ -43,6 +43,8 @@ $(document).ready(function(){
     // parseSvg();
     // revealFooter();
     // _window.on('resize', throttle(revealFooter, 100));
+
+    changeImageSVG();
   }
 
   // this is a master function which should have all functionality
@@ -82,8 +84,43 @@ $(document).ready(function(){
       $('body, html').animate({
           scrollTop: $(el).offset().top}, 1000);
       return false;
-    })
+    });
 
+
+// .img-svg
+  function changeImageSVG() {
+    document.querySelectorAll('img.svg-js').forEach(function (element) {
+      var imgID = element.getAttribute('id'),
+        imgClass = element.getAttribute('class'),
+        imgURL = element.getAttribute('src');
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          let svg = xhr.responseXML.getElementsByTagName('svg')[0];
+
+          if (imgID != null) {
+            svg.setAttribute('id', imgID);
+          }
+
+          if (imgClass != null) {
+            svg.setAttribute('class', imgClass + ' replaced-svg');
+          }
+
+          svg.removeAttribute('xmlns:a');
+
+          if (!svg.hasAttribute('viewBox') && svg.hasAttribute('height') && svg.hasAttribute('width')) {
+            svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'))
+          }
+          element.parentElement.replaceChild(svg, element)
+        }
+      };
+
+      xhr.open('GET', imgURL, true);
+      xhr.send(null);
+    })
+  }
 
   // HEADER SCROLL
   // add .header-static for .page or body

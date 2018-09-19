@@ -2,6 +2,45 @@
 
 header.header
   .container
-    .header__wrapper
-        
+    .header__wrapper.c-block
+      .header__wrapper-left
+        .logotype
+          a(
+            href="/"
+            title=""
+            class=""
+          )
+            img.svg-js(src="./img/logo.svg")
+
+      .header__wrapper-right
+
+        .nav
+          ul.nav__list
+            li.nav__item
+              a.nav__link(
+                href="#" title="" class=""
+              )!= "Learn"
+            li.nav__item
+              a.nav__link(
+                href="#" title="" class=""
+              )!= "Teach"
+            li.nav__item
+              a.nav__icon(
+                href="#" title="" class=""
+              )
+                +icon("ico-notify")
+            li.nav__item.nav__item--dropdown
+              a.nav__link(
+                href="#" title="" class=""
+              )
+                div
+                  img(
+                    srcset="./img/user-photo.png, ./img/user-photo@2x.png 2x"
+                    alt="" 
+                    title=""
+                   )
+                p!= "Blake"
+                +icon("ico-arrow")
+
+
 // HEADER :: END

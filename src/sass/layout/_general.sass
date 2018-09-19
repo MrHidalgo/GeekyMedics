@@ -14,7 +14,7 @@ ul
     display: inline-block
 
 body, html
-  background: white
+  background: $c-f3f5f7
   color: $fontColor
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif
   font-size: 16px
@@ -25,6 +25,9 @@ body, html
   overflow-x: hidden
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+body
+  padding-top: 35px
 
 .page
   display: flex
@@ -39,14 +42,14 @@ body, html
     //padding-top: 100px
 
 .container
-  max-width: 1200px
+  max-width: 1440px
   width: 100%
   margin-left: auto
   margin-right: auto
-  padding-left: 40px
-  padding-right: 40px
+  padding-left: 35px
+  padding-right: 35px
 
 +r($mobile)
   .container
-    padding-left: 15px
-    padding-right: 15px
+    padding-left: 20px
+    padding-right: 20px
