@@ -1,0 +1,41 @@
+// PROFILE :: START
+
+section.profile.c-block.c-block--plr.c-block--ptb
+  .profile__wrapper
+
+    h1.title!= "Profile"
+
+    .profile__user
+      p.profile__user-name!= "Blake Fuller"
+      p.profile__user-pos!= "GP Trainee"
+
+    .profile__circle-wrap
+      .profile__circle.profile__circle-0
+        p!= "Performance"
+
+      .profile__circle.profile__circle-1
+        p!= "Reputation"
+
+      .profile__circle.profile__circle-2
+        p!= "Correct answers to questions"
+
+
+    .profile__text-wrap
+      div.profile__text.profile__text-0
+        div
+          i.icon-broken-bone
+        span!= "You are strongest in Rheumatology"
+      div.profile__text.profile__text-1
+        div
+          i.icon-test-tube
+        span!= "You are strongest in Rheumatology"
+
+    .btn__group
+      a(
+        href="#" title="" class="btn"
+      )!= "View"
+      a(
+        href="#" title="" class="profile__btn btn--internal"
+      )!= "Generate certificate"
+
+// PROFILE :: END

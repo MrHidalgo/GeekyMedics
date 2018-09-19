@@ -3,8 +3,80 @@
 .c-block
   border-radius: 10px
   background-color: $white
+  box-shadow: 0 2px 24px 0 rgba($black, 0.04)
+  &--plr
+    padding-left: 35px
+    padding-right: 35px
+  &--ptb
+    padding-top: 35px
+    padding-bottom: 35px
 
 
+// title
+// ===============
+.title
+  color: $c-686879
+  font-size: 22px
+  font-weight: 600
+
+  &__wrap
+    cursor: pointer
+    display: flex
+    align-items: center
+
+    p
+      width: calc(100% - 25px)
+    div
+      width: 25px
+
+.description
+  color: $c-686879
+  font-size: 20px
+  font-weight: 300
+
+  a
+    color: $c-00529e
+    font-weight: 500
+
+
+// btn
+// ===============
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  max-width: 152px
+  height: 43px
+  border-radius: 21.5px
+  background-color: $c-41c2a5
+  color: $white
+  font-size: 18px
+  font-weight: 600
+
+  &--centered
+    margin-left: auto
+    margin-right: auto
+
+  &--internal
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 43px
+    border-radius: 21.5px
+    background-color: transparent
+    font-size: 18px
+    font-weight: 600
+
+  &__group
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+// logotype
+// ===============
 .logotype
   padding-top: 25px
   padding-left: 26px
@@ -13,6 +85,9 @@
   a
     display: flex
 
+
+// nav
+// ===============
 .nav
   &__list
     display: flex
@@ -21,13 +96,13 @@
   &__item
     &:last-child
       a
-        padding-left: 15px
+        margin-left: 15px
 
   &__link
     display: flex
     align-items: center
-    padding-left: 15px
-    padding-right: 15px
+    margin-left: 15px
+    margin-right: 15px
     color: $c-686879
     font-size: 19px
     font-weight: 500
@@ -59,8 +134,8 @@
 
   &__icon
     display: flex
-    padding-left: 15px
-    padding-right: 15px
+    margin-left: 15px
+    margin-right: 15px
 
     svg
       width: 22px

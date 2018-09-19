@@ -45,6 +45,7 @@ $(document).ready(function(){
     // _window.on('resize', throttle(revealFooter, 100));
 
     changeImageSVG();
+    titleCollapse();
   }
 
   // this is a master function which should have all functionality
@@ -120,6 +121,16 @@ $(document).ready(function(){
       xhr.open('GET', imgURL, true);
       xhr.send(null);
     })
+  }
+
+  function titleCollapse() {
+    $("[titleHead-js]").on("click", function(e) {
+      var elem = $(e.currentTarget),
+        parentContainer = elem.closest("section").find("[titleBody-js]");
+
+      elem.toggleClass("is-active");
+      parentContainer.slideToggle(300);
+    });
   }
 
   // HEADER SCROLL
