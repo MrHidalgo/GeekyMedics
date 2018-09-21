@@ -15,7 +15,7 @@ $(document).ready(function(){
     desktop: 992,
     wide: 1336,
     hd: 1680
-  }
+  };
 
   var easingSwing = [.02, .01, .47, 1]; // default jQuery easing for anime.js
 
@@ -55,7 +55,7 @@ $(document).ready(function(){
   // some plugins work best with onload triggers
   _window.on('load', function(){
     // your functions
-  })
+  });
 
 
   //////////
@@ -99,7 +99,7 @@ $(document).ready(function(){
 
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-          let svg = xhr.responseXML.getElementsByTagName('svg')[0];
+          var svg = xhr.responseXML.getElementsByTagName('svg')[0];
 
           if (imgID != null) {
             svg.setAttribute('id', imgID);

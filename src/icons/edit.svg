@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>edit</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2,15 L3.07589193,11.0544094 L5.95665033,13.9384803 L2,15 Z M13.9676013,5.92398932 L6.47932556,13.4143834 L3.59504168,10.5309152 L11.0833174,3.04052113 L13.9676013,5.92398932 Z M14.5423659,5.34274945 L11.6618875,2.45965968 L12.928458,1.19015274 C13.1829761,0.936615753 13.597793,0.936615753 13.8511911,1.19015274 L15.8100564,3.15089485 C16.0633145,3.40513261 16.0633145,3.82012599 15.8100564,4.07408344 L14.5423659,5.34274945 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="geeky-simple-footer" transform="translate(-287.000000, -336.000000)">
+            <g id="left-panel" transform="translate(36.000000, 154.000000)">
+                <g id="left-profil-foto" transform="translate(163.000000, 103.050463)">
+                    <g id="Profile">
+                        <g id="buttons/fab/white" transform="translate(77.820755, 70.000000)">
+                            <g id="icon/24px/Plus" transform="translate(8.528302, 8.235294)">
+                                <g id="Icon/24px/Left-Align">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <use id="edit" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

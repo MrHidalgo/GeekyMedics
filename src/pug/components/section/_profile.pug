@@ -5,6 +5,20 @@ section.profile.c-block.c-block--plr.c-block--ptb
 
     h1.title!= "Profile"
 
+    .profile__ava
+      .profile__ava-img
+        img(
+          srcset="./img/ava.png, ./img/ava@2x.png 2x"
+          alt="" 
+          title=""
+         )
+      a.profile__ava-edit(
+        href="#"
+        title=""
+        class=""
+      )
+        +icon("ico-edit")
+
     .profile__user
       p.profile__user-name!= "Blake Fuller"
       p.profile__user-pos!= "GP Trainee"
