@@ -7,8 +7,72 @@
     width: calc(100% / 5)
     text-align: center
 
-    p
-      padding-top: 33px
+    &-0
+      svg
+        circle
+          &:nth-of-type(1)
+            stroke: rgba(#ff7986, 0.2)
+
+      .progress
+        p
+          color: #ff6473
+
+    &-1
+      svg
+        circle
+          &:nth-of-type(1)
+            stroke: rgba(#f5a623, 0.2)
+
+      .progress
+        p
+          color: #f5a623
+
+    &-2
+      svg
+        circle
+          &:nth-of-type(1)
+            stroke: rgba(#83b2eb, 0.2)
+
+      .progress
+        p
+          color: #83b2eb
+
+    &-3
+      svg
+        circle
+          &:nth-of-type(1)
+            stroke: rgba(#6fbeb5, 0.2)
+
+      .progress
+        p
+          color: #6fbeb5
+
+    &-4
+      svg
+        circle
+          &:nth-of-type(1)
+            stroke: rgba(#22ec92, 0.2)
+
+      .progress
+        p
+          color: #22ec92
+
+    &-5
+      svg
+        circle
+          &:nth-of-type(1)
+            stroke: rgba(#8765c6, 0.2)
+          &:nth-of-type(2)
+            stroke-width: 8px
+
+      .progress
+        p
+          color: #8765C6
+          font-size: 33px
+
+
+    > p
+      padding-top: 23px
       color: $c-767882
       font-weight: 500
 
@@ -29,5 +93,5 @@
       .repetition__circle
         width: 130px
 
-        p
+        > p
           font-size: 18px

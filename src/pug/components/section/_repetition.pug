@@ -8,24 +8,29 @@ section.repetition.c-block.c-block--plr.c-block--ptb
     .repetition__circle-wrap
       .repetition__circle-left
         .repetition__circle.repetition__circle-0
+          +svgCircle('repetition-nknow', 'repetition-nknow-circle', 90, 90, "nknow-gradient", "#ff6473", "#ffcdd2", "90")
           p!= "Don’t Know"
 
         .repetition__circle.repetition__circle-1
+          +svgCircle('repetition-ok', 'repetition-ok-circle', 90, 90, "ok-gradient", "#f9e7a3", "#fbf0c7", "8")
           p!= "Know okay"
 
         .repetition__circle.repetition__circle-2
+          +svgCircle('repetition-know', 'repetition-know-circle', 90, 90, "know-gradient", "#83b2eb", "#a1c3ec", "2")
           p!= "Know"
 
         .repetition__circle.repetition__circle-3
+          +svgCircle('repetition-well', 'repetition-well-circle', 90, 90, "well-gradient", "#5fe1d2", "#91DAD2", "0")
           p!= "Know well"
 
         .repetition__circle.repetition__circle-4
+          +svgCircle('repetition-mastered', 'repetition-mastered-circle', 90, 90, "mastered-gradient", "#3fe199", "#79dbb0", "0")
           p!= "Mastered"
 
       .repetition__circle-right
         .repetition__circle.repetition__circle-5
+          +svgCircle('repetition-progress', 'repetition-progress-circle', 130, 130, "progress-gradient", "#8765c6", "#bc9ee5", "25")
           p!= "Progress"
-
 
     a(
       href="#"

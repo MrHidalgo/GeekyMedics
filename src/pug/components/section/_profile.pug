@@ -25,12 +25,15 @@ section.profile.c-block.c-block--plr.c-block--ptb
 
     .profile__circle-wrap
       .profile__circle.profile__circle-0
+        +svgCircle('profile-performance', 'profile-performance-circle', 90, 90, "performance-gradient", "#5d8ef1", "#00529e", "50")
         p!= "Performance"
 
       .profile__circle.profile__circle-1
+        +svgCircle('profile-reputation', 'profile-reputation-circle', 90, 90, "reputation-gradient", "#5d8ef1", "#00529e", "25")
         p!= "Reputation"
 
       .profile__circle.profile__circle-2
+        +svgCircle('profile-correct', 'profile-correct-circle', 90, 90, "correct-gradient", "#5d8ef1", "#00529e", "75")
         p!= "Correct answers to questions"
 
 

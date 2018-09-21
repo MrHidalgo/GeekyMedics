@@ -7,3 +7,31 @@ mixin icon(name, modClass)
     - var modClass = ' ' + modClass
   svg(class="ico " + name + modClass)
     use(xlink:href= svgSprite + '#' + name)
+
+
+mixin svgCircle(svgId, circleId, w, h, gradientName, startColor, endColor, valPercent)
+  .progress
+    p.progress__value!= valPercent + "%"
+    svg(
+      id!= svgId
+      width= w height= h viewPort="0 0 100 100"
+      data-val!= valPercent
+      version="1.1" xmlns="http://www.w3.org/2000/svg"
+    )
+      defs
+        linearGradient(
+          id!= gradientName
+          x1="0%" y1="0%" x2="0%" y2="100%"
+        )
+          stop(offset="0%" stop-color!= startColor)
+          stop(offset="100%" stop-color!= endColor)
+      circle(
+        r= ((w / 2) - 10) cx= (w / 2) cy= (h / 2)
+        fill="transparent" stroke-dasharray="1000%" stroke-dashoffset="0"
+      )
+      circle(
+        id!= circleId
+        class="progress__circle"
+        r= ((w / 2) - 10) cx= (w / 2) cy= (h / 2)
+        fill="transparent" stroke="url(#" + gradientName + ")"  stroke-dashoffset="0"
+      )

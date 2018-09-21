@@ -46,6 +46,7 @@ $(document).ready(function(){
 
     changeImageSVG();
     titleCollapse();
+    circleSvgProgress();
   }
 
   // this is a master function which should have all functionality
@@ -130,6 +131,35 @@ $(document).ready(function(){
 
       elem.toggleClass("is-active");
       parentContainer.slideToggle(300);
+    });
+  }
+
+  function circleSvgProgress() {
+    var elemSvgArr = $(".progress svg");
+
+    elemSvgArr.each(function(idx, val) {
+      var elem = $(val),
+        elemCircle = elem.find(".progress__circle"),
+        elemPercentVal = parseInt(elem.data("val"));
+
+      if (isNaN(elemPercentVal)) {
+        elemPercentVal = 100;
+      } else{
+        var r = parseInt(elemCircle.attr('r')),
+          c = Math.PI * (r * 2);
+
+        if (elemPercentVal < 0) {
+          elemPercentVal = 0;
+        }
+        if (elemPercentVal > 100) {
+          elemPercentVal = 100;
+        }
+
+        var pct = ((100 - elemPercentVal) / 100) * c;
+
+        elemCircle.css({"strokeDasharray": c });
+        elemCircle.animate({"strokeDashoffset": pct}, 500);
+      }
     });
   }
 

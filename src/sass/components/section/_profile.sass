@@ -80,6 +80,18 @@
     width: calc(100% / 3)
     text-align: center
 
+    &-0,
+    &-1,
+    &-2
+      svg
+        circle
+          &:nth-of-type(1)
+            stroke: rgba(#00529e, 0.2)
+
+    .progress
+      p
+        color: #00529e
+
     p
       color: $c-767882
       font-weight: 500
