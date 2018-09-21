@@ -1,2 +1,32 @@
 // FOOTER
 .footer
+  &__wrapper
+    display: flex
+    align-items: center
+    padding-top: 97px
+    padding-bottom: 21px
+    border-top: 1px solid $c-eff0f4
+
+    &-left,
+    &-middle,
+    &-right
+      width: calc(100% / 3)
+
+    &-right
+      display: flex
+      justify-content: flex-end
+
+  &__nav
+    ul
+      display: flex
+      padding: 0
+
+    li
+      &:last-child
+        a
+          margin-right: 0
+
+    a
+      margin-right: 15px
+      color: $c-a8acb9
+      font-weight: 600
