@@ -160,15 +160,16 @@
       flex-wrap: wrap
       justify-content: center
 
-      a
-        @include r(575)
-          max-width: 100%
-        &:first-child
+    a
+      @include r(1023)
+        max-width: 100%
+      &:first-child
+        @include r(1023)
           margin-bottom: 20px
-          @include r(767)
-            margin-bottom: 0
-          @include r(575)
-            margin-bottom: 20px
+        @include r(767)
+          margin-bottom: 0
+        @include r(575)
+          margin-bottom: 20px
 
 // logotype
 // ===============
