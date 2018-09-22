@@ -6,20 +6,48 @@
     padding-top: 97px
     padding-bottom: 21px
     border-top: 1px solid $c-eff0f4
+    @include r(1199)
+      flex-wrap: wrap
+    @include r(767)
+      padding-top: 45px
 
     &-left,
     &-middle,
     &-right
       width: calc(100% / 3)
 
+    &-left
+      @include r(1199)
+        order: 1
+        width: 50%
+      @include r(767)
+        width: 100%
+    &-middle
+      @include r(1199)
+        order: 3
+        width: 100%
+      @include r(767)
+        width: 100%
+
     &-right
       display: flex
       justify-content: flex-end
+      @include r(1199)
+        order: 2
+        width: 50%
+      @include r(767)
+        justify-content: center
+        width: 100%
+        padding-top: 30px
+        padding-bottom: 30px
 
   &__nav
     ul
       display: flex
       padding: 0
+      @include r(767)
+        flex-wrap: wrap
+        flex-direction: column
 
     li
       &:last-child
@@ -27,6 +55,13 @@
           margin-right: 0
 
     a
+      white-space: nowrap
       margin-right: 15px
       color: $c-a8acb9
       font-weight: 600
+      @include r(767)
+        display: block
+        padding-top: 15px
+        padding-bottom: 15px
+        margin: 0
+        text-align: center
