@@ -79,6 +79,18 @@
   &__circle
     width: calc(100% / 3)
     text-align: center
+    @include r(1023)
+      width: 100%
+      padding-bottom: 15px
+    @include r(767)
+      width: calc(100% / 3)
+      padding-bottom: 0
+    @include r(575)
+      width: 100%
+      padding-bottom: 15px
+
+      &:last-child
+        padding-bottom: 0
 
     &-0,
     &-1,
@@ -99,6 +111,9 @@
     &-wrap
       display: flex
       padding-bottom: 63px
+      @include r(1023)
+        flex-wrap: wrap
+        justify-content: center
 
   &__text
     display: flex

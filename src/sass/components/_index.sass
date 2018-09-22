@@ -7,9 +7,15 @@
   &--plr
     padding-left: 35px
     padding-right: 35px
+    @include r(575)
+      padding-left: 20px
+      padding-right: 20px
   &--ptb
     padding-top: 35px
     padding-bottom: 35px
+    @include r(575)
+      padding-top: 20px
+      padding-bottom: 20px
 
 
 // title
@@ -18,6 +24,9 @@
   color: $c-686879
   font-size: 22px
   font-weight: 600
+  @include r(575)
+    font-size: 18px
+
 
   &__wrap
     cursor: pointer
@@ -109,10 +118,18 @@
   max-width: 152px
   height: 43px
   border-radius: 21.5px
+  border: 1px solid transparent
   background-color: $c-41c2a5
   color: $white
   font-size: 18px
   font-weight: 600
+  @include transition(border-color, background-color, color)
+
+  &:hover
+    border-color: $c-41c2a5
+    background-color: transparent
+    color: $c-41c2a5
+    @include transition(border-color, background-color, color)
 
   &--centered
     margin-left: auto
@@ -133,7 +150,25 @@
     display: flex
     align-items: center
     justify-content: space-between
+    @include r(1023)
+      flex-wrap: wrap
+      justify-content: center
+    @include r(767)
+      flex-wrap: nowrap
+      justify-content: space-between
+    @include r(575)
+      flex-wrap: wrap
+      justify-content: center
 
+      a
+        @include r(575)
+          max-width: 100%
+        &:first-child
+          margin-bottom: 20px
+          @include r(767)
+            margin-bottom: 0
+          @include r(575)
+            margin-bottom: 20px
 
 // logotype
 // ===============

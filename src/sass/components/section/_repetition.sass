@@ -6,6 +6,10 @@
   &__circle
     width: calc(100% / 5)
     text-align: center
+    @include r(1199)
+      width: calc(100% / 3)
+    @include r(575)
+      width: calc(100% / 2)
 
     &-0
       svg
@@ -80,16 +84,27 @@
       display: flex
       align-items: center
       padding-bottom: 33px
+      @include r(1365)
+        flex-wrap: wrap
 
     &-left
       display: flex
       justify-content: space-between
       width: calc(100% - 227px)
+      @include r(1365)
+        width: 100%
+      @include r(1199)
+        flex-wrap: wrap
+        justify-content: center
 
     &-right
       display: flex
       justify-content: flex-end
       width: 227px
+      @include r(1365)
+        justify-content: center
+        width: 100%
+        padding-top: 30px
 
       .repetition__circle
         width: 130px
