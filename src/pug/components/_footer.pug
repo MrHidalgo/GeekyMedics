@@ -1,28 +1,18 @@
 // FOOTER :: START
-
 footer.footer
   .container
     .footer__wrapper
       .footer__wrapper-left
-
         .footer__nav
           ul
             li
-              a(
-                href="#" title="" class=""
-              )!= "About"
+              a(href="test.html" title="") About
             li
-              a(
-                href="#" title="" class=""
-              )!= "Contact Us"
+              a(href="test.html" title="") Contact Us
             li
-              a(
-                href="#" title="" class=""
-              )!= "Disclaimer"
+              a(href="test.html" title="") Disclaimer
             li
-              a(
-                href="#" title="" class=""
-              )!= "Privacy Policy"
+              a(href="test.html" title="") Privacy Policy
 
       .footer__wrapper-middle
         .copyright
@@ -30,27 +20,14 @@ footer.footer
 
       .footer__wrapper-right
         .social
-          ul
-            li
-              a(
-                href="#" title="" class=""
-              )
-                +icon("ico-Twitter")
-            li
-              a(
-                href="#" title="" class=""
-              )
-                +icon("ico-Facebook")
-            li
-              a(
-                href="#" title="" class=""
-              )
-                +icon("ico-instagram")
-            li
-              a(
-                href="#" title="" class=""
-              )
-                +icon("ico-youtube")
+          a.social__link.social__link--twitter(href="#" target="_blank" title="")
+            +icon("ico-Twitter")
+          a.social__link.social__link--facebook(href="#" target="_blank" title="")
+            +icon("ico-Facebook")
+          a.social__link.social__link--instagram(href="#" target="_blank" title="")
+            +icon("ico-instagram")
+          a.social__link.social__link--youtube(href="#" target="_blank" title="")
+            +icon("ico-youtube")
 
 
 // FOOTER :: END

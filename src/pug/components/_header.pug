@@ -1,12 +1,12 @@
 // HEADER :: START
 
-header.header
+header.header(data-aos="fade-down")
   .container
     .header__wrapper.c-block
       .header__wrapper-left
         .logotype
           a(
-            href="/"
+            href="homepage.html"
             title=""
             class=""
           )
@@ -18,29 +18,27 @@ header.header
           ul.nav__list
             li.nav__item
               a.nav__link(
-                href="#" title="" class=""
+                href="test.html" title="" class=""
               )!= "Learn"
             li.nav__item
               a.nav__link(
-                href="#" title="" class=""
+                href="test.html" title="" class=""
               )!= "Teach"
             li.nav__item
               a.nav__icon(
-                href="#" title="" class=""
+                href="test.html" title="" class=""
               )
                 +icon("ico-notify")
             li.nav__item.nav__item--dropdown
-              a.nav__link(
-                href="#" title="" class=""
-              )
+              a.nav__link(href="#" title="" js-header-dropdown)
                 div
                   img(
-                    srcset="./img/user-photo.png, ./img/user-photo@2x.png 2x"
-                    alt="" 
-                    title=""
-                   )
-                p!= "Blake"
+                    srcset="./img/user-photo.png, ./img/user-photo@2x.png 2x" alt="" title="")
+                p Blake
                 +icon("ico-arrow")
 
 
 // HEADER :: END
+
+// transition class for preloader
+.js-transition-overlay.js-transition-overlay--initial

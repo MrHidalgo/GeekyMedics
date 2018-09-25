@@ -2,18 +2,18 @@
 
 .c-block
   border-radius: 10px
-  background-color: $white
-  box-shadow: 0 2px 24px 0 rgba($black, 0.04)
+  background-color: #fff
+  box-shadow: 0 2px 24px 0 rgba(#000, 0.04)
   &--plr
     padding-left: 35px
     padding-right: 35px
-    @include r(575)
+    +r(575)
       padding-left: 20px
       padding-right: 20px
   &--ptb
     padding-top: 35px
     padding-bottom: 35px
-    @include r(575)
+    +r(575)
       padding-top: 20px
       padding-bottom: 20px
 
@@ -21,10 +21,10 @@
 // title
 // ===============
 .title
-  color: $c-686879
+  color: $fontColor
   font-size: 22px
   font-weight: 600
-  @include r(575)
+  +r(575)
     font-size: 18px
 
 
@@ -41,7 +41,7 @@
 // description
 // ===============
 .description
-  color: $c-686879
+  color: $fontColor
   font-size: 20px
   font-weight: 300
 
@@ -81,32 +81,6 @@
       stroke-linecap: round
       transition: stroke-dashoffset 1s linear
 
-// copyright
-// ===============
-.copyright
-  text-align: center
-
-  p
-    color: rgba($c-a8acb9, 0.4)
-
-
-// social
-// ===============
-.social
-  ul
-    display: flex
-    padding: 0
-
-  li
-    &:first-child
-      a
-        margin-left: 0
-
-  a
-    display: flex
-    align-items: center
-    margin-left: 30px
-
 
 // btn
 // ===============
@@ -119,17 +93,17 @@
   height: 43px
   border-radius: 21.5px
   border: 1px solid transparent
-  background-color: $c-41c2a5
-  color: $white
+  background-color: $colorPrimary
+  color: #fff
   font-size: 18px
   font-weight: 600
-  @include transition(border-color, background-color, color)
+  +transition(border-color, background-color, color)
 
   &:hover
-    border-color: $c-41c2a5
+    border-color: $colorPrimary
     background-color: transparent
-    color: $c-41c2a5
-    @include transition(border-color, background-color, color)
+    color: $colorPrimary
+    +transition(border-color, background-color, color)
 
   &--centered
     margin-left: auto
@@ -150,107 +124,23 @@
     display: flex
     align-items: center
     justify-content: space-between
-    @include r(1023)
+    +r(1023)
       flex-wrap: wrap
       justify-content: center
-    @include r(767)
+    +r(767)
       flex-wrap: nowrap
       justify-content: space-between
-    @include r(575)
+    +r(575)
       flex-wrap: wrap
       justify-content: center
 
     a
-      @include r(1023)
+      +r(1023)
         max-width: 100%
       &:first-child
-        @include r(1023)
+        +r(1023)
           margin-bottom: 20px
-        @include r(767)
+        +r(767)
           margin-bottom: 0
-        @include r(575)
+        +r(575)
           margin-bottom: 20px
-
-// logotype
-// ===============
-.logotype
-  padding-top: 25px
-  padding-left: 26px
-  padding-bottom: 18px
-  @include r(767)
-    padding-left: 15px
-
-  a
-    display: flex
-
-
-// nav
-// ===============
-.nav
-  &__list
-    display: flex
-    align-items: center
-
-  &__item
-    &:last-child
-      a
-        margin-left: 15px
-        @include r(767)
-          margin-right: 0
-
-    &--dropdown
-      @include r(767)
-        p
-          display: none
-
-  &__link
-    display: flex
-    align-items: center
-    margin-left: 15px
-    margin-right: 15px
-    color: $c-686879
-    font-weight: 500
-    @include r(767)
-      margin-left: 5px
-      margin-right: 5px
-    @include rmin(768)
-      font-size: 16px
-    @include rmin(1024)
-      font-size: 19px
-
-    div
-      overflow: hidden
-      position: relative
-      width: 55px
-      height: 55px
-      margin-right: 14px
-      border-radius: 100%
-      background-color: $white
-
-      img
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
-        object-position: center
-
-    p
-      margin-right: 14px
-
-    svg
-      width: 13px
-      height: 8px
-
-  &__icon
-    display: flex
-    margin-left: 15px
-    margin-right: 15px
-    @include r(767)
-      margin-left: 5px
-      margin-right: 5px
-
-    svg
-      width: 22px
-      height: 28px

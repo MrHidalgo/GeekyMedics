@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,h6
   padding: 0
 
 body, html
-  background: $c-f3f5f7
+  background: $colorBackground
   color: $fontColor
   font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif
   font-size: 16px
@@ -33,7 +33,7 @@ body, html
 
 body
   padding-top: 35px
-  @include r(575)
+  +r(575)
     padding-top: 20px
 
 .page
@@ -60,3 +60,17 @@ body
   .container
     padding-left: 20px
     padding-right: 20px
+
+
+.js-transition-overlay
+  position: fixed
+  top: 0
+  left: -100%
+  bottom: 0
+  z-index: 8
+  background: $colorBackground
+  width: 100vw
+  will-change: transform
+  backface-visibility: hidden
+  &--initial
+    left: 0

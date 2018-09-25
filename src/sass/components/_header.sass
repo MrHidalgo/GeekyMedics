@@ -1,5 +1,8 @@
 /* HEADER
 .header
+  position: relative
+  z-index: 10
+  transform: translate3d(0,0,0)
   &__wrapper
     display: flex
     align-items: center
@@ -13,6 +16,102 @@
       display: flex
       justify-content: flex-end
       padding-right: 26px
-      @include r(767)
+      +r(767)
         padding-right: 15px
 
+
+
+// logotype
+// ===============
+.logotype
+  display: flex
+  padding-top: 25px
+  padding-left: 26px
+  padding-bottom: 18px
+  font-size: 0
+  a
+    transition: transform .25s $ease
+    &:hover
+      transform: scale(1.1)
+  +r(767)
+    padding-left: 15px
+
+
+// nav
+// ===============
+.nav
+  &__list
+    display: flex
+    align-items: center
+
+  &__item
+    &:last-child
+      a
+        margin-left: 15px
+        +r(767)
+          margin-right: 0
+
+    &--dropdown
+      .nav__link.is-active
+        svg
+          transform: rotate(180deg)
+
+      +r(767)
+        p
+          display: none
+
+  &__link
+    display: flex
+    align-items: center
+    margin-left: 15px
+    margin-right: 15px
+    color: $fontColor
+    font-weight: 500
+    transition: color .25s $ease
+    &:hover
+      color: $colorPrimary
+    +r(767)
+      margin-left: 5px
+      margin-right: 5px
+    +rmin(768)
+      font-size: 16px
+    +rmin(1024)
+      font-size: 19px
+
+    div
+      overflow: hidden
+      position: relative
+      width: 55px
+      height: 55px
+      margin-right: 14px
+      border-radius: 100%
+      background-color: #fff
+
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+    p
+      margin-right: 14px
+
+    svg
+      width: 13px
+      height: 8px
+      transition: .25s $ease
+
+  &__icon
+    display: flex
+    margin-left: 15px
+    margin-right: 15px
+    +r(767)
+      margin-left: 5px
+      margin-right: 5px
+
+    svg
+      width: 22px
+      height: 28px

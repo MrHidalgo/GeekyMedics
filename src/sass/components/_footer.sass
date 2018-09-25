@@ -6,9 +6,9 @@
     padding-top: 97px
     padding-bottom: 21px
     border-top: 1px solid $c-eff0f4
-    @include r(1199)
+    +r(1199)
       flex-wrap: wrap
-    @include r(767)
+    +r(767)
       padding-top: 45px
 
     &-left,
@@ -17,25 +17,25 @@
       width: calc(100% / 3)
 
     &-left
-      @include r(1199)
+      +r(1199)
         order: 1
         width: 50%
-      @include r(767)
+      +r(767)
         width: 100%
     &-middle
-      @include r(1199)
+      +r(1199)
         order: 3
         width: 100%
-      @include r(767)
+      +r(767)
         width: 100%
 
     &-right
       display: flex
       justify-content: flex-end
-      @include r(1199)
+      +r(1199)
         order: 2
         width: 50%
-      @include r(767)
+      +r(767)
         justify-content: center
         width: 100%
         padding-top: 30px
@@ -45,7 +45,7 @@
     ul
       display: flex
       padding: 0
-      @include r(767)
+      +r(767)
         flex-wrap: wrap
         flex-direction: column
 
@@ -59,9 +59,55 @@
       margin-right: 15px
       color: $c-a8acb9
       font-weight: 600
-      @include r(767)
+      transition: .25s $ease
+      &:hover
+        color: $colorPrimary
+      +r(767)
         display: block
         padding-top: 15px
         padding-bottom: 15px
         margin: 0
         text-align: center
+
+
+
+// copyright
+// ===============
+.copyright
+  text-align: center
+  p
+    color: rgba($c-a8acb9, 0.4)
+
+
+// social
+// ===============
+.social
+  display: flex
+  padding: 0
+  margin: 0 -10px
+
+  &__link
+    display: flex
+    align-items: center
+    padding: 10px
+    margin-right: 10px
+    &:last-child
+      margin-right: 0
+    .ico
+      transition: fill .25s $ease
+    &--twitter
+      &:hover
+        .ico
+          fill: $twitter
+    &--facebook
+      &:hover
+        .ico
+          fill: $facebook
+    &--instagram
+      &:hover
+        .ico
+          fill: $instagram
+    &--youtube
+      &:hover
+        .ico
+          fill: $youtube
